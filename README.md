@@ -36,4 +36,12 @@
     c)	İlgili sınav ile istatistikleri paylaşır
 
 
+- Portal Olay Akışı aşağıdaki gibidir:
+
+ - Akademisyenler sınavları oluşturur ve yayınlarlar. 
+ - Kullanıcılar ilgili  kategorilerde sınavlara girerler ve sınavları puanlayıp yorumlarlar. 
+ - Değerlendiriciler sınav sonuçlarını ve istatistiklerini hesaplarlar.
+ - Akademisyenler ilgili sınavlara yapılan yorumları ve ilgili sınav istatistiklerini görürler.
+ - Kullanıcılar ilgili sınavlara yapılan yorumları ve ilgili sınav istatistiklerini görürler.
+
 
