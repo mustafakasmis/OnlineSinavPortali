@@ -1,0 +1,100 @@
+﻿@using OnlineSinavPortali.Models
+
+@model Tuple<sinavIstatistik,List<string>>
+
+@{
+    ViewBag.Title = "KullaniciSinavIstatistik";
+    Layout = "~/Views/Shared/KullaniciLayoutPage.cshtml";
+}
+
+
+<style>
+    table {
+        border: 1px solid red;
+        margin: 1px 1px 1px 1px;
+    }
+
+    td {
+        color: #07ea43;
+        font-size: 20px;
+    }
+
+    th {
+        color: yellowgreen;
+        font-size: 20px;
+    }
+</style>
+
+
+@if (ViewBag.gelenSinavlar != null)
+{
+
+<h4>GİRİLEN SINAVLAR</h4>
+
+using (Html.BeginForm("KullaniciSinavIstatistik", "Kullanici", FormMethod.Post))
+{
+
+@Html.DropDownList("sinav", new SelectList(ViewBag.gelenSinavlar, "TEXT", "VALUE"), "SINAV SEÇİNİZ", new { @class = "form-control" })
+<br /><br />
+
+<input type="submit" name="onay" value="İSTATİSTİKLERİMİ GÖR" class="btn btn-primary" />
+
+}
+
+
+<hr />
+
+if (ViewBag.istatistikVarMi==true)
+{
+
+<h4>SINAV İSTATİSTİKLERİ</h4>
+
+    <table border="1">
+        <tr>
+            <th>KULLANICI ADI</th>
+            <th>DOĞRU SAYISI</th>
+            <th>YANLIŞ SAYISI</th>
+            <th>SINAV PUANI</th>
+        </tr>
+
+        <tr>
+            <td>@Session["kullaniciAd"].ToString()</td>
+            <td>@Model.Item1.dogruSay</td>
+            <td>@Model.Item1.yanlisSay</td>
+            <td>@Model.Item1.puan</td>
+        </tr>
+    </table>
+
+<hr />
+
+
+<h4>
+    SINAV BİRİNCİSİ VE İSTATİSTİKLERİ
+</h4>
+
+    <table border="1">
+        <tr>
+            <th>KULLANICI ADI</th>
+            <th>DOĞRU SAYISI</th>
+            <th>YANLIŞ SAYISI</th>
+            <th>SINAV PUANI</th>
+        </tr>
+
+        <tr>
+            <td>@Model.Item2[0]</td>
+            <td>@Model.Item2[1]</td>
+            <td>@Model.Item2[2]</td>
+            <td>@Model.Item2[3]</td>
+        </tr>
+    </table>
+
+    }
+
+}
+
+else
+{
+
+<h4>SINAVINIZ HENÜZ DEĞERLENDİRİLMEMİŞ. SINAVINIZ DEĞERLENDİRİLDİKTEN SONRA SINAV İSTATİSTİKLERİNİZİ GÖREBİLİRSİNİZ</h4>
+
+}

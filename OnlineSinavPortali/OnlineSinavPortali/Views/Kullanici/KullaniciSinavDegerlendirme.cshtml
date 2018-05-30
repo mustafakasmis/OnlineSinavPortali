@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "KullaniciSinavDegerlendirme";
+    Layout = "~/Views/Shared/KullaniciLayoutPage.cshtml";
+}
+
+<style>
+    h4 {
+        color:#07ea43;
+    }
+</style>
+
+<h4>SINAV DEĞERLENDİRME</h4>
+
+@using (Html.BeginForm("KullaniciSinavDegerlendirmePuan", "Kullanici", FormMethod.Post))
+{
+
+    for (int i = 1; i <= 5; i++)
+    {
+
+<input type="submit" name="sinavPuan" value="@i" class="btn btn-primary"/><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+
+    }
+
+    
+}
+    <br /><br />
+
+@using (Html.BeginForm("KullaniciSinavDegerlendirmeYorum", "Kullanici", FormMethod.Post))
+
+{
+
+<h4>SINAV YORUMLAMA</h4>
+
+@Html.TextArea("sinavYorum", new { @class = "ckeditor" })<br /><br />
+
+<input type="submit" name="onay" value="PUAN VE YORUM KAYDET" class="btn btn-primary"/>
+
+}
+
+}
+
+@if (TempData["puanEkDurum"] != null)
+{
+    <h4>@TempData["puanEkDurum"]</h4>
+}
+
+@if (TempData["yorumEkDurum"] != null)
+{
+    <h4>@TempData["yorumEkDurum"]</h4>
+}
+
+
+

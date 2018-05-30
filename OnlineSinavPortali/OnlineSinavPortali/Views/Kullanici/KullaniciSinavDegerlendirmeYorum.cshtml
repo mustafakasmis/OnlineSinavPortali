@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "KullaniciSinavDegerlendirme";
+    Layout = "~/Views/Shared/KullaniciLayoutPage.cshtml";
+}
+
+<h4>SINAV DEĞERLENDİRME</h4>
+
+@using (Html.BeginForm("KullaniciSinavDegerlendirmePuan", "Kullanici", FormMethod.Post))
+{
+
+    for (int i = 1; i <= 5; i++)
+    {
+
+        <button type="submit" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-star" aria-hidden="true" style="font-size:15px;">@i</span>
+        </button><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+
+    }
+
+}
+<br /><br />
+
+@using (Html.BeginForm("KullaniciSinavDegerlendirmeYorum", "Kullanici", FormMethod.Post))
+
+{
+
+    <h4>SINAV YORUMLAMA</h4>
+
+    @Html.TextArea("sinavYorum", new { @class = "ckeditor" })<br /><br />
+
+    <input type="submit" name="onay" value="PUAN VE YORUM KAYDET" class="btn btn-primary" />
+
+}
+
+}
+

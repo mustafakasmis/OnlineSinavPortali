@@ -1,0 +1,38 @@
+﻿@using OnlineSinavPortali.Models
+
+@model  Tuple<kullanicilar,girisler>
+
+@{
+    ViewBag.Title = "KullaniciProfilDuzenle";
+    Layout = "~/Views/Shared/KullaniciLayoutPage.cshtml";
+}
+
+@using (Html.BeginForm("KullaniciProfilDuzenle", "Kullanici", FormMethod.Post, new { @name = "kayitForm", id = "FormListe", ng_app = "" }))
+{
+
+    @Html.Label("", "ADINIZI GİRİNİZ", new { @class = "text-info" })
+    @Html.TextBox("ad", Model.Item1.ad, new { @class = "form-control" })<br />
+
+    @Html.Label("", "SOYADINIZI GİRİNİZ", new { @class = "text-info" })
+    @Html.TextBox("soyad", Model.Item1.soyad, new { @class = "form-control" })<br />
+
+    @Html.Label("", "E_MAİLİNİZİ GİRİNİZ", new { @class = "text-info" })
+    @Html.TextBox("e_mail", Model.Item1.e_mail, new { @class = "form-control"})<br />
+
+    @Html.Label("", "KULLANICI ADINIZI GİRİNİZ", new { @class = "text-info" })
+    @Html.TextBox("kullanici_ad", Model.Item2.kullanici_adi, new { @class = "form-control" })<br />
+
+    @Html.Label("", "PAROLANIZI GİRİNİZ", new { @class = "text-info" })
+    @Html.Password("parola",null, new { @class = "form-control" })<br /><br />
+
+
+    <input type="submit" name="onay" value="GÜNCELLE" class="btn btn-success form-control" />
+    @Html.ActionLink("İPTAL","ProfilGuncellemeIptal",null,new {@class="btn btn-success"})
+
+}
+
+
+@if (ViewBag.guncelleme != null)
+{
+   <h4>@ViewBag.guncelleme</h4>
+}

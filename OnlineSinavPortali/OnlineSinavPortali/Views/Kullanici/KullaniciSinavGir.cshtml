@@ -1,0 +1,66 @@
+﻿@using OnlineSinavPortali.Models
+
+@model Tuple<List<kategoriler>,List<kategoriler>>
+
+@{
+    ViewBag.Title = "KullaniciSinavGir";
+    Layout = "~/Views/Shared/KullaniciLayoutPage.cshtml";
+}
+
+<style>
+    table{
+        border:1px solid red;
+        margin:1px 1px 1px 1px;
+    }
+    td {
+        color: #07ea43;
+        font-size:20px;
+    }
+    th {
+        color: yellowgreen;
+        font-size: 20px;
+    }   
+</style>
+
+
+@if (Model != null) {
+
+    using (Html.BeginForm("KullaniciSinavSayfasiPst", "Kullanici", FormMethod.Post))
+    {
+
+
+<table border="1">
+
+    <tr>
+        <th>SINAV</th>
+        <th>BAĞLI OLDUĞU KATEGORİ</th>
+        <th>SINAVA GİTME KISMI</th>
+    </tr>
+
+    @for (int i = 0; i < Model.Item1.Count; i++)
+    {
+
+    <tr>
+        
+        <td>@Model.Item1[i].kategoriAdi</td>
+        <td>@Model.Item2[i].kategoriAdi</td>
+        <td>
+            @Html.Hidden("sinav", Model.Item1[i].id + "-" + Model.Item2[i].id)
+            <input type="submit" name="onay" value="SINAVA GİR" class="btn btn-default"/>    
+        </td>
+
+    </tr>
+
+    }
+
+</table>
+
+        }
+
+    }
+
+else
+{
+    <h4>MEVCUT SINAV BULUNMAMAKTADIR</h4>
+}
+

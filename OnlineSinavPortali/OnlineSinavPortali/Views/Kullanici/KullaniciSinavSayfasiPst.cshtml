@@ -1,0 +1,81 @@
+﻿@using OnlineSinavPortali.Models
+
+
+@model Tuple<string,List<sorular>,List<secenekler>,List<resimler>>
+
+
+@{
+    ViewBag.Title = "SinavSayfasi";
+    Layout = "~/Views/Shared/KullaniciLayoutPage.cshtml";
+}
+
+
+<div>
+    <h4>SINAVIN ADI:  @Model.Item1.ToString().ToUpper()</h4>
+</div>
+
+
+<div>
+    @if (ViewBag.soruCevaplanmaDurum != null)
+    {
+        <h4>ViewBag.soruCevaplanmaDurum</h4>
+    }
+</div>
+
+
+<div>
+     @using (Html.BeginForm("KullaniciSoruCevap", "Kullanici", FormMethod.Post))
+     {
+
+         for(int i = 0; i < Model.Item2.Count; i++)
+         {
+
+     @Html.Label("","SORU "+(i+1),new { @style="color:green;",@class="form-control"})<br />
+
+     @Html.Label("", "SORU İLE ALAKALI RESİM ", new { @style = "color:green;", @class = "form-control" })
+     <img src="..@Model.Item4[i].soruResim" width="100" height="100" alt="Soruya ait bir resim bulunmamaktadır." /><br /><br />
+
+
+     @Html.TextArea("soru", Model.Item2[i].soru, new { @class="ckeditor",disabled="disabled"})<br />
+
+
+     @Html.Hidden("SoruBilgi", Model.Item2[i].id + "-" + Model.Item2[i].kategoriId, "")
+
+     @Html.Label("","A)",new {@style="color:black;"})
+     <input type="submit" name="secenek" value="@Model.Item3[i].secenek1"  class="btn btn-default"/>
+    
+     <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+
+     @Html.Label("", "B)", new { @style = "color:black;" })
+     <input type="submit" name="secenek" value="@Model.Item3[i].secenek2"  class="btn btn-default"/>
+
+     <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+
+     @Html.Label("", "C)", new { @style = "color:black;" })
+     <input type="submit" name="secenek" value="@Model.Item3[i].secenek3"  class="btn btn-default"/>
+
+     <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+
+     @Html.Label("", "D)", new { @style = "color:black;" })
+     <input type="submit" name="secenek" value="@Model.Item3[i].secenek4"  class="btn btn-default"/>
+
+     <div><br /><br /><br /></div>
+
+         }
+
+     }
+
+    @using (Html.BeginForm("KullaniciSinavDegerlendirme", "Kullanici", FormMethod.Post))
+    {
+        @Html.Hidden("kategoriId",Model.Item2[0].kategoriId)
+        <input type="submit" name="onay" value="SINAVI BİTİR" class="btn btn-success"/>
+    }
+
+</div>
+
+<br />
+
+
+
+
+
