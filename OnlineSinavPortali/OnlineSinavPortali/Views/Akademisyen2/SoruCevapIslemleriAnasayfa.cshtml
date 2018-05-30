@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "SoruIslemleriAnasayfa";
+}
+
+
+@Html.ActionLink("AKADEMİSYEN ANASAYFA", "AkademisyenAnasayfa","Akademisyen" ,null, new { @class = "text-info", @style = "font-size:20px;" })
+
+<br />
+
+<h2>SORU CEVAP İŞLEMLERİ ANASAYFA</h2>
+
+
+<div class="text-center">
+
+    <div>
+        <br /><br />
+    </div>
+
+    @Html.ActionLink("SORU VE CEVAP EKLE", "SoruCevapEkle", "Akademisyen2", null, new { @class = "btn btn-primary" })<br /><br /><br />
+
+    @Html.ActionLink("SORULARI VE CEVAPLARI LİSTELE", "SoruCevapListele", "Akademisyen2", null, new { @class = "btn btn-primary" })<br />
+
+</div>

@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "SoruCevapEkle";
+}
+
+
+<h2>SORU CEVAP EKLEME SAYFASI</h2>
+
+@using (Html.BeginForm("SoruCevapEkle", "Akademisyen2", FormMethod.Post,new { id="FormListe", enctype="multipart/form-data"}))
+{
+    <br />
+    @Html.Label("", "KATEGORİ ADINI GİRİNİZ", new { @class = "text-info" })
+    @Html.TextBox("kategoriAdi", null, new { @class = "form-control" })<br /><br />
+
+    @Html.Label("", "SORUYU GİRİNİZ", new { @class = "text-info" }) 
+    @Html.TextArea("soru",new { @class="ckeditor form-control",width="20px",height="50px"})  <br />
+
+    <br />
+
+    @Html.Label("", "SORU ZORLUK SEVİYESİNİ SEÇİNİZ", new { @class = "text-info" })<br /><br />
+    @Html.DropDownList("soruSeviye",new List<SelectListItem>
+{
+    new SelectListItem{Text="KOLAY",Value="KOLAY"},
+    new SelectListItem{Text="KOLAYUSTU",Value="KOLAYUSTU"},
+    new SelectListItem{Text="ORTA",Value="ORTA"},
+    new SelectListItem{Text="ORTAUSTU",Value="ORTAUSTU"},
+    new SelectListItem{Text="ZOR",Value="ZOR"},
+},"ZORLUK DERECESİ SEÇİNİZ",new { id="DurumListe"})<br /><br />
+
+    @Html.Label("", "SECENEK1 GİRİNİZ", new { @class = "text-info" })
+    @Html.TextBox("secenek1", null, new { @class = "form-control" })<br />
+
+    @Html.Label("", "SECENEK2 GİRİNİZ", new { @class = "text-info" }) 
+    @Html.TextBox("secenek2", null, new { @class = "form-control" })<br />
+
+    @Html.Label("", "SECENEK3 GİRİNİZ", new { @class = "text-info" }) 
+    @Html.TextBox("secenek3", null, new { @class = "form-control" })<br />
+
+    @Html.Label("", "SECENEK4 GİRİNİZ", new { @class = "text-info" }) 
+    @Html.TextBox("secenek4", null, new { @class = "form-control" })<br />
+
+    @Html.Label("", "CEVABI GİRİNİZ", new { @class = "text-info" })<br />
+    @Html.TextBox("cevap", null, new { @class = "form-control" })<br /><br />
+
+    @Html.Label("", "SORUNUN RESMİNİ SEÇİNİZ", new { @class = "text-info" })
+    <input class="form-control" type="file" name="soruResim"/><br />
+
+    @Html.Label("","CEVAP İLE ALAKALI DOKÜMANI SEÇİNİZ", new { @class = "text-info" })
+    <input class="form-control" type="file" name="cevapDokuman" /><br />
+
+    <input type="submit" name="onay" value="EKLE" class="btn btn-success" />
+    @Html.ActionLink("İPTAL VEYA ANASAYFAYA DÖN", "IptalAnasayfa", "Akademisyen2", null, new { @class = "btn btn-success" })
+
+}
+
+@if (ViewBag.txt != null)
+{
+    <h3>@ViewBag.txt</h3>
+}
+

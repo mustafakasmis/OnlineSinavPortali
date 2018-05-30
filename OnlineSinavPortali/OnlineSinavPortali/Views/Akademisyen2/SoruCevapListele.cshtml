@@ -1,0 +1,111 @@
+﻿@using OnlineSinavPortali.Models
+
+@model Tuple<List<sorular>,List<secenekler>,List<cevaplar>, List<resimler>>
+
+@{
+    ViewBag.Title = "SoruCevapListele";
+}
+
+
+<style>
+    table {
+        border: 1px solid red;
+        margin: 1px 1px 1px 1px;
+    }
+
+    td {
+        color: #07ea43;
+        font-size: 18px;
+    }
+
+    th {
+        color: yellowgreen;
+        font-size: 18px;
+    }
+</style>
+
+
+<h2>SORU CEVAP LİSTELEME SAYFASI</h2>
+
+@if (ViewBag.silinmeDurum != null)
+{
+    <h3>@ViewBag.silinmeDurum</h3>
+}
+
+@if (ViewBag.guncellemeDurum!=null)
+{
+    <h3>@ViewBag.guncellemeDurum</h3>
+}
+
+
+@using (Html.BeginForm("SoruCevapListele", "Akademisyen2", FormMethod.Post))
+{
+    <br />
+    @Html.Label("", "KATEGORİ ADINI GİRİNİZ",new { @class="text-info" })<br />
+  
+    @Html.DropDownList("Sinavlar", new SelectList(ViewBag.sinavsorucevap, "Text", "Value"), "Sınav Seçiniz", new { @class = "form-control" })<br />
+
+    <input type="submit" value="SORULARI VE CEVAPLARI LİSTELE" class="btn btn-success"/>
+
+    @Html.ActionLink("İPTAL VEYA ANASAYFAYA DÖN", "IptalAnasayfa", "Akademisyen2", null, new { @class = "btn btn-success" })
+
+}
+
+<br /><br/>
+
+<table border="1" name="tbl" id="tbl" >
+
+    @if (Model != null)
+    {
+
+        <tr>
+            <th scope="col">SORU</th>
+            <th scope="col">SORU ZORLUK</th>
+            <th scope="col">SEÇENEK 1</th>
+            <th scope="col">SEÇENEK 2</th>
+            <th scope="col">SEÇENEK 3</th>
+            <th scope="col">SEÇENEK 4</th>
+            <th scope="col">CEVAP</th>
+            <th scope="col">GÜNCELLEME İŞLEMİ</th>
+            <th scope="col">SİLME İŞLEMİ</th>
+        </tr>
+
+        for (int i = 0; i < Model.Item1.Count; i++)
+        {
+
+         <tr>
+
+        <td>@Model.Item1[i].soru</td>
+        <td>@Model.Item1[i].soruZorluk</td>
+        <td>@Model.Item2[i].secenek1</td>
+        <td>@Model.Item2[i].secenek2</td>
+        <td>@Model.Item2[i].secenek3</td>
+        <td>@Model.Item2[i].secenek4</td>
+        <td>@Model.Item3[i].cevap</td>
+
+        @using (Html.BeginForm("SoruCevapGuncelle","Akademisyen2",FormMethod.Post))
+        {
+
+        <td>
+              @Html.Hidden("katSorId",Model.Item1[i].kategoriId+"-"+Model.Item1[i].id) 
+              <input type="submit" name="guncelle" value="GÜNCELLEME FORMU DOLDUR"/>
+        </td>
+
+        }
+
+        @using (Html.BeginForm("SoruCevapSil", "Akademisyen2", FormMethod.Post))
+        {
+         <td>
+             @Html.Hidden("katSorId", Model.Item1[i].kategoriId + "-" + Model.Item1[i].id)
+            <input type="submit" name="sil" value="SİL"/>
+        </td>
+        }
+
+         </tr>
+
+     }
+
+  }
+
+</table>
+

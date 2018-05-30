@@ -1,0 +1,66 @@
+﻿@using OnlineSinavPortali.Models
+
+
+@model Tuple<sorular,secenekler,cevaplar,resimler>
+
+
+@{
+    ViewBag.Title = "SoruCevapGuncelle";
+}
+
+
+<h2>SORU CEVAP GÜNCELLEME SAYFASI</h2>
+
+
+@using (Html.BeginForm("SoruCevapGuncelleVt", "Akademisyen2", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<br />
+@Html.Label("", "KATEGORİ ADINI GİRİNİZ", new { @class = "text-info" })<br />
+@Html.TextBox("kategoriAdi",(object)ViewBag.anlikKategori, new { @class = "form-control" })<br /><br />
+
+
+@Html.Label("", "ÜST KATEGORİ GUNCELLENECEKSE YENİ KATEGORİ ADINI GİRİNİZ YOKSA ESKİ KATEGORİ ADINI GİRİNİZ", new { @class = "text-info" })<br />
+@Html.TextBox("yeniKategori",(object)ViewData["prtKat"], new { @class = "form-control" })<br /><br/>
+
+
+@Html.Label("", "SORUYU GİRİNİZ", new { @class = "text-info" })<br />
+@Html.TextArea("soru",Model.Item1.soru, new { @class = "ckeditor form-control", width = "20px", height = "50px" })  <br /><br />
+
+
+@Html.Label("", "SORU ZORLUK DERECESİNİ GİRİNİZ", new { @class = "text-info" })<br />
+@Html.TextBox("soruSeviye", Model.Item1.soruZorluk, new { @class = "form-control" })<br /><br />
+
+
+@Html.Label("", "SECENEK1 GİRİNİZ", new { @class = "text-info" })<br />
+@Html.TextBox("secenek1",Model.Item2.secenek1, new { @class = "form-control" })<br /><br />
+
+
+@Html.Label("", "SECENEK2 GİRİNİZ", new { @class = "text-info" })<br />
+@Html.TextBox("secenek2", Model.Item2.secenek2, new { @class = "form-control" })<br /><br />
+
+
+@Html.Label("", "SECENEK3 GİRİNİZ", new { @class = "text-info" })<br />
+@Html.TextBox("secenek3", Model.Item2.secenek3, new { @class = "form-control" })<br /><br />
+
+
+@Html.Label("", "SECENEK4 GİRİNİZ", new { @class = "text-info" })<br />
+@Html.TextBox("secenek4", Model.Item2.secenek4, new { @class = "form-control" })<br /><br />
+
+
+@Html.Label("", "CEVABI GİRİNİZ", new { @class = "text-info" }) <br/>
+@Html.TextBox("cevap",Model.Item3.cevap, new { @class = "form-control" })<br /><br />
+
+
+@Html.Label("", "SORUNUN RESMİNİ SEÇİNİZ", new { @class = "text-info" })<b>&nbsp;</b>
+
+<input type="file" name="soruResim" /><br />
+
+@Html.Label("", "CEVAP İLE ALAKALI DOKÜMANI SEÇİNİZ", new { @class = "text-info" })<b>&nbsp;</b>
+
+<input type="file" name="cevapDokuman" /><br /><br />
+
+<input type="submit" name="onay" value="GÜNCELLE" class="btn btn-success" />
+@Html.ActionLink("İPTAL VEYA ANASAYFAYA DÖN", "IptalAnasayfa", "Akademisyen2", null, new { @class = "btn btn-success" })
+
+}
+
