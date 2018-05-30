@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SinavPortalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cevaplar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KTG_id" Type="Int32" Nullable="false" />
+    <Property Name="soruID" Type="Int32" Nullable="false" />
+    <Property Name="cevap" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cevapDokuman" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="kategoriler" Relationship="Self.FK_cevaplar_kategoriler" FromRole="cevaplar" ToRole="kategoriler" />
+    <NavigationProperty Name="sorular" Relationship="Self.FK_cevaplar_sorular" FromRole="cevaplar" ToRole="sorular" />
+    <NavigationProperty Name="resimler" Relationship="Self.FK_resimler_cevaplar" FromRole="cevaplar" ToRole="resimler" />
+  </EntityType>
+  <EntityType Name="degerlendirme">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="katId" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_id" Type="Int32" Nullable="false" />
+    <Property Name="puan" Type="Int32" Nullable="false" />
+    <Property Name="yorum" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="kategoriler" Relationship="Self.FK_degerlendirme_kategoriler" FromRole="degerlendirme" ToRole="kategoriler" />
+    <NavigationProperty Name="kullanicilar" Relationship="Self.FK_degerlendirme_kullanicilar" FromRole="degerlendirme" ToRole="kullanicilar" />
+  </EntityType>
+  <EntityType Name="girisler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kid" Type="Int32" Nullable="false" />
+    <Property Name="kullanici_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parola" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="durum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="kullanicilar" Relationship="Self.FK_girisler_kullanicilar" FromRole="girisler" ToRole="kullanicilar" />
+  </EntityType>
+  <EntityType Name="kategoriler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parentId" Type="Int32" />
+    <NavigationProperty Name="cevaplar" Relationship="Self.FK_cevaplar_kategoriler" FromRole="kategoriler" ToRole="cevaplar" />
+    <NavigationProperty Name="degerlendirme" Relationship="Self.FK_degerlendirme_kategoriler" FromRole="kategoriler" ToRole="degerlendirme" />
+    <NavigationProperty Name="kullanici_cevaplar" Relationship="Self.FK_kullanici_cevaplar_kategoriler" FromRole="kategoriler" ToRole="kullanici_cevaplar" />
+    <NavigationProperty Name="resimler" Relationship="Self.FK_resimler_kategoriler" FromRole="kategoriler" ToRole="resimler" />
+    <NavigationProperty Name="secenekler" Relationship="Self.FK_secenekler_kategoriler" FromRole="kategoriler" ToRole="secenekler" />
+    <NavigationProperty Name="sinavIstatistik" Relationship="Self.FK_sinavIstatistik_kategoriler" FromRole="kategoriler" ToRole="sinavIstatistik" />
+    <NavigationProperty Name="sorular" Relationship="Self.FK_sorular_kategoriler" FromRole="kategoriler" ToRole="sorular" />
+  </EntityType>
+  <EntityType Name="kullanici_cevaplar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="klnc_id" Type="Int32" Nullable="false" />
+    <Property Name="KTGID" Type="Int32" Nullable="false" />
+    <Property Name="soruid" Type="Int32" Nullable="false" />
+    <Property Name="klnc_cevap" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="kategoriler" Relationship="Self.FK_kullanici_cevaplar_kategoriler" FromRole="kullanici_cevaplar" ToRole="kategoriler" />
+    <NavigationProperty Name="kullanicilar" Relationship="Self.FK_kullanici_cevaplar_kullanicilar" FromRole="kullanici_cevaplar" ToRole="kullanicilar" />
+    <NavigationProperty Name="sorular" Relationship="Self.FK_kullanici_cevaplar_sorular" FromRole="kullanici_cevaplar" ToRole="sorular" />
+  </EntityType>
+  <EntityType Name="kullanicilar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="e_mail" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uyelik_tarihi" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="degerlendirme" Relationship="Self.FK_degerlendirme_kullanicilar" FromRole="kullanicilar" ToRole="degerlendirme" />
+    <NavigationProperty Name="girisler" Relationship="Self.FK_girisler_kullanicilar" FromRole="kullanicilar" ToRole="girisler" />
+    <NavigationProperty Name="kullanici_cevaplar" Relationship="Self.FK_kullanici_cevaplar_kullanicilar" FromRole="kullanicilar" ToRole="kullanici_cevaplar" />
+    <NavigationProperty Name="sinavIstatistik" Relationship="Self.FK_sinavIstatistik_kullanicilar" FromRole="kullanicilar" ToRole="sinavIstatistik" />
+  </EntityType>
+  <EntityType Name="resimler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KTG_ID" Type="Int32" Nullable="false" />
+    <Property Name="srd_id" Type="Int32" Nullable="false" />
+    <Property Name="cvp_id" Type="Int32" Nullable="false" />
+    <Property Name="soruResim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="cevaplar" Relationship="Self.FK_resimler_cevaplar" FromRole="resimler" ToRole="cevaplar" />
+    <NavigationProperty Name="kategoriler" Relationship="Self.FK_resimler_kategoriler" FromRole="resimler" ToRole="kategoriler" />
+    <NavigationProperty Name="resimler1" Relationship="Self.FK_resimler_resimler" FromRole="resimler" ToRole="resimler1" />
+    <NavigationProperty Name="resimler2" Relationship="Self.FK_resimler_resimler" FromRole="resimler1" ToRole="resimler" />
+    <NavigationProperty Name="sorular" Relationship="Self.FK_resimler_sorular" FromRole="resimler" ToRole="sorular" />
+  </EntityType>
+  <EntityType Name="secenekler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ktg_id" Type="Int32" Nullable="false" />
+    <Property Name="soru_id" Type="Int32" Nullable="false" />
+    <Property Name="secenek1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="secenek2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="secenek3" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="secenek4" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="kategoriler" Relationship="Self.FK_secenekler_kategoriler" FromRole="secenekler" ToRole="kategoriler" />
+    <NavigationProperty Name="sorular" Relationship="Self.FK_secenekler_sorular" FromRole="secenekler" ToRole="sorular" />
+  </EntityType>
+  <EntityType Name="sinavIstatistik">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kullanici_ID" Type="Int32" Nullable="false" />
+    <Property Name="KAT_ID" Type="Int32" Nullable="false" />
+    <Property Name="dogruSay" Type="Int32" />
+    <Property Name="yanlisSay" Type="Int32" />
+    <Property Name="puan" Type="Int32" />
+    <NavigationProperty Name="kategoriler" Relationship="Self.FK_sinavIstatistik_kategoriler" FromRole="sinavIstatistik" ToRole="kategoriler" />
+    <NavigationProperty Name="kullanicilar" Relationship="Self.FK_sinavIstatistik_kullanicilar" FromRole="sinavIstatistik" ToRole="kullanicilar" />
+  </EntityType>
+  <EntityType Name="sorular">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriId" Type="Int32" Nullable="false" />
+    <Property Name="soru" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="soruZorluk" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="cevaplar" Relationship="Self.FK_cevaplar_sorular" FromRole="sorular" ToRole="cevaplar" />
+    <NavigationProperty Name="kategoriler" Relationship="Self.FK_sorular_kategoriler" FromRole="sorular" ToRole="kategoriler" />
+    <NavigationProperty Name="kullanici_cevaplar" Relationship="Self.FK_kullanici_cevaplar_sorular" FromRole="sorular" ToRole="kullanici_cevaplar" />
+    <NavigationProperty Name="resimler" Relationship="Self.FK_resimler_sorular" FromRole="sorular" ToRole="resimler" />
+    <NavigationProperty Name="secenekler" Relationship="Self.FK_secenekler_sorular" FromRole="sorular" ToRole="secenekler" />
+  </EntityType>
+  <Association Name="FK_cevaplar_kategoriler">
+    <End Role="kategoriler" Type="Self.kategoriler" Multiplicity="1" />
+    <End Role="cevaplar" Type="Self.cevaplar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cevaplar">
+        <PropertyRef Name="KTG_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cevaplar_sorular">
+    <End Role="sorular" Type="Self.sorular" Multiplicity="1" />
+    <End Role="cevaplar" Type="Self.cevaplar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sorular">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cevaplar">
+        <PropertyRef Name="soruID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_resimler_cevaplar">
+    <End Role="cevaplar" Type="Self.cevaplar" Multiplicity="1" />
+    <End Role="resimler" Type="Self.resimler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cevaplar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="resimler">
+        <PropertyRef Name="cvp_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_degerlendirme_kategoriler">
+    <End Role="kategoriler" Type="Self.kategoriler" Multiplicity="1" />
+    <End Role="degerlendirme" Type="Self.degerlendirme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="degerlendirme">
+        <PropertyRef Name="katId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_degerlendirme_kullanicilar">
+    <End Role="kullanicilar" Type="Self.kullanicilar" Multiplicity="1" />
+    <End Role="degerlendirme" Type="Self.degerlendirme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kullanicilar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="degerlendirme">
+        <PropertyRef Name="kullanici_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_girisler_kullanicilar">
+    <End Role="kullanicilar" Type="Self.kullanicilar" Multiplicity="1" />
+    <End Role="girisler" Type="Self.girisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kullanicilar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="girisler">
+        <PropertyRef Name="kid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_kullanici_cevaplar_kategoriler">
+    <End Role="kategoriler" Type="Self.kategoriler" Multiplicity="1" />
+    <End Role="kullanici_cevaplar" Type="Self.kullanici_cevaplar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="kullanici_cevaplar">
+        <PropertyRef Name="KTGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_resimler_kategoriler">
+    <End Role="kategoriler" Type="Self.kategoriler" Multiplicity="1" />
+    <End Role="resimler" Type="Self.resimler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="resimler">
+        <PropertyRef Name="KTG_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_secenekler_kategoriler">
+    <End Role="kategoriler" Type="Self.kategoriler" Multiplicity="1" />
+    <End Role="secenekler" Type="Self.secenekler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="secenekler">
+        <PropertyRef Name="Ktg_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sinavIstatistik_kategoriler">
+    <End Role="kategoriler" Type="Self.kategoriler" Multiplicity="1" />
+    <End Role="sinavIstatistik" Type="Self.sinavIstatistik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="sinavIstatistik">
+        <PropertyRef Name="KAT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sorular_kategoriler">
+    <End Role="kategoriler" Type="Self.kategoriler" Multiplicity="1" />
+    <End Role="sorular" Type="Self.sorular" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="sorular">
+        <PropertyRef Name="kategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_kullanici_cevaplar_kullanicilar">
+    <End Role="kullanicilar" Type="Self.kullanicilar" Multiplicity="1" />
+    <End Role="kullanici_cevaplar" Type="Self.kullanici_cevaplar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kullanicilar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="kullanici_cevaplar">
+        <PropertyRef Name="klnc_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_kullanici_cevaplar_sorular">
+    <End Role="sorular" Type="Self.sorular" Multiplicity="1" />
+    <End Role="kullanici_cevaplar" Type="Self.kullanici_cevaplar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sorular">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="kullanici_cevaplar">
+        <PropertyRef Name="soruid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sinavIstatistik_kullanicilar">
+    <End Role="kullanicilar" Type="Self.kullanicilar" Multiplicity="1" />
+    <End Role="sinavIstatistik" Type="Self.sinavIstatistik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kullanicilar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="sinavIstatistik">
+        <PropertyRef Name="Kullanici_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_resimler_resimler">
+    <End Role="resimler" Type="Self.resimler" Multiplicity="1" />
+    <End Role="resimler1" Type="Self.resimler" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="resimler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="resimler1">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_resimler_sorular">
+    <End Role="sorular" Type="Self.sorular" Multiplicity="1" />
+    <End Role="resimler" Type="Self.resimler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sorular">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="resimler">
+        <PropertyRef Name="srd_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_secenekler_sorular">
+    <End Role="sorular" Type="Self.sorular" Multiplicity="1" />
+    <End Role="secenekler" Type="Self.secenekler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sorular">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="secenekler">
+        <PropertyRef Name="soru_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SinavPortalEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cevaplar" EntityType="Self.cevaplar" />
+    <EntitySet Name="degerlendirme" EntityType="Self.degerlendirme" />
+    <EntitySet Name="girisler" EntityType="Self.girisler" />
+    <EntitySet Name="kategoriler" EntityType="Self.kategoriler" />
+    <EntitySet Name="kullanici_cevaplar" EntityType="Self.kullanici_cevaplar" />
+    <EntitySet Name="kullanicilar" EntityType="Self.kullanicilar" />
+    <EntitySet Name="resimler" EntityType="Self.resimler" />
+    <EntitySet Name="secenekler" EntityType="Self.secenekler" />
+    <EntitySet Name="sinavIstatistik" EntityType="Self.sinavIstatistik" />
+    <EntitySet Name="sorular" EntityType="Self.sorular" />
+    <AssociationSet Name="FK_cevaplar_kategoriler" Association="Self.FK_cevaplar_kategoriler">
+      <End Role="kategoriler" EntitySet="kategoriler" />
+      <End Role="cevaplar" EntitySet="cevaplar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cevaplar_sorular" Association="Self.FK_cevaplar_sorular">
+      <End Role="sorular" EntitySet="sorular" />
+      <End Role="cevaplar" EntitySet="cevaplar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_resimler_cevaplar" Association="Self.FK_resimler_cevaplar">
+      <End Role="cevaplar" EntitySet="cevaplar" />
+      <End Role="resimler" EntitySet="resimler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_degerlendirme_kategoriler" Association="Self.FK_degerlendirme_kategoriler">
+      <End Role="kategoriler" EntitySet="kategoriler" />
+      <End Role="degerlendirme" EntitySet="degerlendirme" />
+    </AssociationSet>
+    <AssociationSet Name="FK_degerlendirme_kullanicilar" Association="Self.FK_degerlendirme_kullanicilar">
+      <End Role="kullanicilar" EntitySet="kullanicilar" />
+      <End Role="degerlendirme" EntitySet="degerlendirme" />
+    </AssociationSet>
+    <AssociationSet Name="FK_girisler_kullanicilar" Association="Self.FK_girisler_kullanicilar">
+      <End Role="kullanicilar" EntitySet="kullanicilar" />
+      <End Role="girisler" EntitySet="girisler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_kullanici_cevaplar_kategoriler" Association="Self.FK_kullanici_cevaplar_kategoriler">
+      <End Role="kategoriler" EntitySet="kategoriler" />
+      <End Role="kullanici_cevaplar" EntitySet="kullanici_cevaplar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_resimler_kategoriler" Association="Self.FK_resimler_kategoriler">
+      <End Role="kategoriler" EntitySet="kategoriler" />
+      <End Role="resimler" EntitySet="resimler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_secenekler_kategoriler" Association="Self.FK_secenekler_kategoriler">
+      <End Role="kategoriler" EntitySet="kategoriler" />
+      <End Role="secenekler" EntitySet="secenekler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sinavIstatistik_kategoriler" Association="Self.FK_sinavIstatistik_kategoriler">
+      <End Role="kategoriler" EntitySet="kategoriler" />
+      <End Role="sinavIstatistik" EntitySet="sinavIstatistik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sorular_kategoriler" Association="Self.FK_sorular_kategoriler">
+      <End Role="kategoriler" EntitySet="kategoriler" />
+      <End Role="sorular" EntitySet="sorular" />
+    </AssociationSet>
+    <AssociationSet Name="FK_kullanici_cevaplar_kullanicilar" Association="Self.FK_kullanici_cevaplar_kullanicilar">
+      <End Role="kullanicilar" EntitySet="kullanicilar" />
+      <End Role="kullanici_cevaplar" EntitySet="kullanici_cevaplar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_kullanici_cevaplar_sorular" Association="Self.FK_kullanici_cevaplar_sorular">
+      <End Role="sorular" EntitySet="sorular" />
+      <End Role="kullanici_cevaplar" EntitySet="kullanici_cevaplar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sinavIstatistik_kullanicilar" Association="Self.FK_sinavIstatistik_kullanicilar">
+      <End Role="kullanicilar" EntitySet="kullanicilar" />
+      <End Role="sinavIstatistik" EntitySet="sinavIstatistik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_resimler_resimler" Association="Self.FK_resimler_resimler">
+      <End Role="resimler" EntitySet="resimler" />
+      <End Role="resimler1" EntitySet="resimler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_resimler_sorular" Association="Self.FK_resimler_sorular">
+      <End Role="sorular" EntitySet="sorular" />
+      <End Role="resimler" EntitySet="resimler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_secenekler_sorular" Association="Self.FK_secenekler_sorular">
+      <End Role="sorular" EntitySet="sorular" />
+      <End Role="secenekler" EntitySet="secenekler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

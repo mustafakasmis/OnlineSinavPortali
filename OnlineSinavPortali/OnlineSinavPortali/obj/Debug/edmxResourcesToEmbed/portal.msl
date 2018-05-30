@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SinavPortalModelStoreContainer" CdmEntityContainer="SinavPortalEntities">
+    <EntitySetMapping Name="cevaplar">
+      <EntityTypeMapping TypeName="SinavPortalModel.cevaplar">
+        <MappingFragment StoreEntitySet="cevaplar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="KTG_id" ColumnName="KTG_id" />
+          <ScalarProperty Name="soruID" ColumnName="soruID" />
+          <ScalarProperty Name="cevap" ColumnName="cevap" />
+          <ScalarProperty Name="cevapDokuman" ColumnName="cevapDokuman" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="degerlendirme">
+      <EntityTypeMapping TypeName="SinavPortalModel.degerlendirme">
+        <MappingFragment StoreEntitySet="degerlendirme">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="katId" ColumnName="katId" />
+          <ScalarProperty Name="kullanici_id" ColumnName="kullanici_id" />
+          <ScalarProperty Name="puan" ColumnName="puan" />
+          <ScalarProperty Name="yorum" ColumnName="yorum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="girisler">
+      <EntityTypeMapping TypeName="SinavPortalModel.girisler">
+        <MappingFragment StoreEntitySet="girisler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kid" ColumnName="kid" />
+          <ScalarProperty Name="kullanici_adi" ColumnName="kullanici_adi" />
+          <ScalarProperty Name="parola" ColumnName="parola" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kategoriler">
+      <EntityTypeMapping TypeName="SinavPortalModel.kategoriler">
+        <MappingFragment StoreEntitySet="kategoriler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kategoriAdi" ColumnName="kategoriAdi" />
+          <ScalarProperty Name="parentId" ColumnName="parentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanici_cevaplar">
+      <EntityTypeMapping TypeName="SinavPortalModel.kullanici_cevaplar">
+        <MappingFragment StoreEntitySet="kullanici_cevaplar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="klnc_id" ColumnName="klnc_id" />
+          <ScalarProperty Name="KTGID" ColumnName="KTGID" />
+          <ScalarProperty Name="soruid" ColumnName="soruid" />
+          <ScalarProperty Name="klnc_cevap" ColumnName="klnc_cevap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanicilar">
+      <EntityTypeMapping TypeName="SinavPortalModel.kullanicilar">
+        <MappingFragment StoreEntitySet="kullanicilar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+          <ScalarProperty Name="uyelik_tarihi" ColumnName="uyelik_tarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resimler">
+      <EntityTypeMapping TypeName="SinavPortalModel.resimler">
+        <MappingFragment StoreEntitySet="resimler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="KTG_ID" ColumnName="KTG_ID" />
+          <ScalarProperty Name="srd_id" ColumnName="srd_id" />
+          <ScalarProperty Name="cvp_id" ColumnName="cvp_id" />
+          <ScalarProperty Name="soruResim" ColumnName="soruResim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="secenekler">
+      <EntityTypeMapping TypeName="SinavPortalModel.secenekler">
+        <MappingFragment StoreEntitySet="secenekler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Ktg_id" ColumnName="Ktg_id" />
+          <ScalarProperty Name="soru_id" ColumnName="soru_id" />
+          <ScalarProperty Name="secenek1" ColumnName="secenek1" />
+          <ScalarProperty Name="secenek2" ColumnName="secenek2" />
+          <ScalarProperty Name="secenek3" ColumnName="secenek3" />
+          <ScalarProperty Name="secenek4" ColumnName="secenek4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sinavIstatistik">
+      <EntityTypeMapping TypeName="SinavPortalModel.sinavIstatistik">
+        <MappingFragment StoreEntitySet="sinavIstatistik">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Kullanici_ID" ColumnName="Kullanici_ID" />
+          <ScalarProperty Name="KAT_ID" ColumnName="KAT_ID" />
+          <ScalarProperty Name="dogruSay" ColumnName="dogruSay" />
+          <ScalarProperty Name="yanlisSay" ColumnName="yanlisSay" />
+          <ScalarProperty Name="puan" ColumnName="puan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sorular">
+      <EntityTypeMapping TypeName="SinavPortalModel.sorular">
+        <MappingFragment StoreEntitySet="sorular">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kategoriId" ColumnName="kategoriId" />
+          <ScalarProperty Name="soru" ColumnName="soru" />
+          <ScalarProperty Name="soruZorluk" ColumnName="soruZorluk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
