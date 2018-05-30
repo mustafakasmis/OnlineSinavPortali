@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b770ba7839b44c77a228c89360173b7b" Name="Diagram1">
+        <EntityTypeShape EntityType="SinavPortalModel.cevaplar" Width="1.5" PointX="5.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinavPortalModel.degerlendirme" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinavPortalModel.girisler" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinavPortalModel.kategoriler" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinavPortalModel.kullanici_cevaplar" Width="1.5" PointX="8.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinavPortalModel.kullanicilar" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinavPortalModel.resimler" Width="1.5" PointX="10.5" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinavPortalModel.secenekler" Width="1.5" PointX="5.25" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinavPortalModel.sinavIstatistik" Width="1.5" PointX="6" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinavPortalModel.sorular" Width="1.5" PointX="3" PointY="26.75" IsExpanded="true" />
+        <AssociationConnector Association="SinavPortalModel.FK_cevaplar_kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_cevaplar_sorular" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_resimler_cevaplar" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_degerlendirme_kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_degerlendirme_kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_girisler_kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_kullanici_cevaplar_kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_resimler_kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_secenekler_kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_sinavIstatistik_kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_sorular_kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_kullanici_cevaplar_kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_kullanici_cevaplar_sorular" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_sinavIstatistik_kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_resimler_resimler" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_resimler_sorular" ManuallyRouted="false" />
+        <AssociationConnector Association="SinavPortalModel.FK_secenekler_sorular" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
