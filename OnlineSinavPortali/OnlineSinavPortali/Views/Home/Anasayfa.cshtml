@@ -1,0 +1,110 @@
+﻿@{
+    ViewBag.Title = "ANASAYFA";
+}
+
+<script>
+
+    $(function () {
+
+        $("#grsIslem").hide();
+        $("#dgrIslem").hide();
+
+        $("#grs").click(function () {
+            $("#grsIslem").toggle();
+            $("#dgrIslem").hide();
+        });
+
+        $("#dgr").click(function () {
+            $("#dgrIslem").toggle();
+            $("#grsIslem").hide();
+        });
+
+    });
+
+</script>
+
+
+<div class="text-center">
+    <h1 style="color:#07ea43">ONLİNE SINAV PORTALINA HOŞGELDİNİZ</h1>
+</div>
+
+
+<div>
+    <br /><br /><br />
+</div>
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-5 well text-center">
+            <button id="grs" type="button" class="btn btn-primary">GİRİŞ İŞLEMLERİ </button>
+        </div>
+
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+
+
+        <div class="col-md-5 well text-center">
+            <button id="dgr" type="button" class="btn btn-primary">KAYIT İŞLEMLERİ VE DİĞER KISIMLAR</button>
+        </div>
+
+        <div><br /><br /><br /></div>
+
+        <div id="grsIslem" class="col-md-12 text-center">
+
+            <div><br /></div><div><br /></div>
+            <div><br /></div><div><br /></div>
+            <div><br /></div><div><br /></div>
+
+            <div class="col-md-12">
+
+                <div class="col-md-4">
+                    @Html.ActionLink("KULLANICI GİRİŞ", "KullaniciGiris", "Home", null, new { @class = "btn btn-primary" })<br /><br />
+                </div>
+
+                <div class="col-md-4">
+                    <div>@Html.ActionLink("AKADEMİSYEN GİRİŞ", "AkademisyenGiris", "Home", null, new { @class = "btn btn-primary" })<br /><br /></div>
+                </div>
+
+                <div class="col-md-4">
+                    <div>@Html.ActionLink("DEĞERLENDİRİCİ GİRİŞ", "DegerlendiriciGiris", "Home", null, new { @class = "btn btn-primary" })<br /><br /></div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div id="dgrIslem" class="col-md-12 text-center">
+
+            <div><br /></div><div><br /></div>
+            <div><br /></div><div><br /></div>
+            <div><br /></div><div><br /></div>
+
+            <div class="col-md-12">
+
+                <div class="col-md-4">
+                    @Html.ActionLink("KAYIT OLMA", "KayitSayfasi", "Home", null, new { @class = "btn btn-primary" })<br /><br />
+                </div>
+
+
+                <div class="col-md-4">
+                    @Html.ActionLink("HAKKIMIZDA", "Hakkimizda", null, new { @class = "btn btn-primary" })<br /><br />
+                </div>
+
+
+                <div class="col-md-4">
+                    @Html.ActionLink("İLETİŞİM", "Iletisim", null, new { @class = "btn btn-primary" })
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

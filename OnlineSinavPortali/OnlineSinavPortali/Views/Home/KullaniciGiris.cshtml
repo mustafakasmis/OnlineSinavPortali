@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "KullaniciGiris";
+}
+
+<div class="">
+    <a href="/Home/Anasayfa" class="text-info" style="font-size:20px;">ONLİNE SINAV PORTALI ANASAYFA</a><br /><br />
+</div>
+
+<h2>KULLANICI GİRİŞ SAYFASI</h2>
+
+<div>
+    <br /><br />
+</div>
+
+<div class="">
+
+    <div class="">
+
+        @using (Html.BeginForm("KullaniciGiris", "Home", FormMethod.Post))
+        {
+
+            @Html.Label("", "KULLANICI ADINIZI GİRİNİZ", new { @class = "text-info" })
+            @Html.TextBox("kullanici_ad", null, new { @class = "form-control" })<br />
+
+            @Html.Label("", "PAROLANIZI GİRİNİZ", new { @class = "text-info" })
+            @Html.Password("parola", null, new { @class = "form-control" })<br />
+
+            <input type="submit" name="onay" value="GİRİŞ YAP" class="btn btn-success" />
+
+            @Html.ActionLink("PAROLAMI UNUTTUM", "ParolamiUnuttum", null, new { @class = "btn btn-success" })
+
+        }
+
+    </div>
+
+</div>
+

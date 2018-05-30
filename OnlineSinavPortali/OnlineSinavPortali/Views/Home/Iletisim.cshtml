@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Iletisim";
+}
+
+<div class="">
+    <a href="/Home/Anasayfa" class="text-info" style="font-size:20px;">ONLİNE SINAV PORTALI ANASAYFA</a><br /><br />
+</div>
+
+<h2>İLETİŞİM SAYFASI</h2>
+
+    @using(Html.BeginForm("Iletisim","Home",FormMethod.Post, new { @name = "iletisimForm", ng_app = "" }))
+    {
+        @Html.Label("","ADINIZ", new { @class = "text-info" })<br />
+
+        @Html.TextBox("ad",null,new { @class="form-control"})<br />
+
+        @Html.Label("", "SOYADINIZ", new { @class = "text-info" })<br />
+
+        @Html.TextBox("soyad", null, new { @class = "form-control" })<br />
+
+        @Html.Label("", "E-MAİLİNİZ", new { @class = "text-info" })<br />
+
+        @Html.TextBox("e_mail", null, new { @class = "form-control", @type = "email", ng_model = "e_mail" })<br />
+
+        <h4 ng-if="!iletisimForm.e_mail.$valid">GEÇERSİZ E_MAİL ADRESİ</h4><br /><br />
+
+        @Html.Label("", "MESAJINIZ", new { @class = "text-info" })<br />
+
+        @Html.TextArea("mesaj", new { @class="ckeditor"})<br />
+
+        <input type="submit" name="onay" class="btn btn-success" value="GÖNDER"/>
+    }

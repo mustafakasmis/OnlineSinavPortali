@@ -1,0 +1,52 @@
+﻿
+@model kullanicilar
+
+@{
+    ViewBag.Title = "KayitSayfasi";
+}
+
+<div class="">
+    <a href="/Home/Anasayfa" class="text-info" style="font-size:20px;">ONLİNE SINAV PORTALI ANASAYFA</a><br /><br />
+</div>
+
+<h2>SİSTEM KAYIT SAYFASI</h2>
+
+@using (Html.BeginForm("KayitSayfasi", "Home", FormMethod.Post,new { @name = "kayitForm",id = "FormListe",ng_app="" }))
+{
+
+    @Html.Label("", "ADINIZI GİRİNİZ", new { @class = "text-info" })
+    @Html.TextBox("ad",null,new { @class = "form-control" })<br />
+
+    @Html.Label("", "SOYADINIZI GİRİNİZ", new { @class = "text-info" })
+    @Html.TextBox("soyad", null, new { @class = "form-control" })<br />
+
+    @Html.Label("", "E_MAİLİNİZİ GİRİNİZ", new { @class = "text-info" })
+    @Html.TextBox("e_mail", null, new { @class = "form-control",@type="email",ng_model="e_mail" })<br />
+
+    <h4 ng-if="!kayitForm.e_mail.$valid">GEÇERSİZ E_MAİL ADRESİ</h4><br />
+
+    @Html.Label("", "KULLANICI ADINIZI GİRİNİZ", new { @class = "text-info" })
+    @Html.TextBox("kullanici_ad", null, new { @class = "form-control" })<br />
+
+    @Html.Label("", "PAROLANIZI GİRİNİZ", new { @class = "text-info" })
+    @Html.Password("parola", null, new { @class = "form-control" })<br /><br />
+
+    @Html.DropDownList("Durumlar", new List<SelectListItem> { new SelectListItem { Text = "Kullanici", Value = "Kullanici" },
+    new SelectListItem { Text="Akademisyen", Value="Akademisyen"},
+    new SelectListItem { Text="Degerlendirici",Value="Degerlendirici" } } ,"Durum Seçiniz",new { id = "DurumListe",@class="form-control" })<br /><br />
+
+    <input type="submit" name="onay" value="EKLE" class="btn btn-success form-control"/>
+
+}
+
+@if (ViewBag.kullaniciVar != null)
+{
+    <h4>@ViewBag.kullaniciVar</h4>
+}
+
+
+@if (ViewBag.mesaj != null)
+{
+    <h4>@ViewBag.mesaj</h4>
+}
+

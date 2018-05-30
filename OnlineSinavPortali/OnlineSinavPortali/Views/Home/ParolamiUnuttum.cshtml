@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "ParolamiUnuttum";
+}
+
+<div class="">
+    <a href="/Home/Anasayfa" class="text-info" style="font-size:20px;">ONLİNE SINAV PORTALI ANASAYFA</a><br /><br />
+</div>
+
+<h2>PAROLAMI UNUTTUM SAYFASI</h2>
+
+
+@using (Html.BeginForm("ParolamiUnuttum", "Home", FormMethod.Post,new { @name="parolaForm",ng_app=""}))
+{
+    @Html.Label("","YENİ PAROLAYI GİRİNİZ", new { @class = "text-info" })<br />
+    @Html.TextBox("yeniParola",null,new { @class="form-control",@type="password"})<br />
+
+    @Html.Label("", "YENİ PAROLAYI DOĞRULAYINIZ", new { @class = "text-info" })<br />
+    @Html.TextBox("yeniParolaDogrula", null, new { @class = "form-control",@type="password" })<br />
+
+    @Html.Label("", "E_MAİLİNİZİ GİRİNİZ", new { @class = "text-info" })<br />
+    @Html.TextBox("e_mail", null, new { @class = "form-control", @type = "email", ng_model = "e_mail" }) <br />   
+    
+    <h4 ng-if="!parolaForm.e_mail.$valid">GEÇERSİZ E_MAİL ADRESİ</h4><br />
+
+    <input  type="submit" name="degis" value="PAROLAYI SIFIRLA" class="btn btn-success"/>
+
+    @Html.ActionLink("İPTAL", "Anasayfa", null, new { @class = "btn btn-success" })
+
+}
+
+
+@if (ViewBag.sifirlamaDurum != null)
+{
+    <h4>@ViewBag.sifirlamaDurum</h4>
+}
