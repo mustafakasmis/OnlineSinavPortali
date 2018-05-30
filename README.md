@@ -12,6 +12,7 @@
  
 - Veritabanı dili olarak T-SQL kullanılmıştır. Veritabanın ihtiyacı olan server ihtiyacı Microsoft Sql Server ile giderilmiştir.
 
+<br>
 
 - Portalda 3 adet görev tanımlı kişi vardır.
 
@@ -35,8 +36,10 @@
     b)	Sınavları değerlendirir ve sonuçları yayınlar.
     c)	İlgili sınav ile istatistikleri paylaşır
 
+<br>
 
 - Portal Olay Akışı aşağıdaki gibidir:
+
 
  - Akademisyenler sınavları oluşturur ve yayınlarlar. 
  - Kullanıcılar ilgili  kategorilerde sınavlara girerler ve sınavları puanlayıp yorumlarlar. 
