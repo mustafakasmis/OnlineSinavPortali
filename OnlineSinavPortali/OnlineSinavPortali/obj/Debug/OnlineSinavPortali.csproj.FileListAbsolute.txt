@@ -1,0 +1,114 @@
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\csc.exe
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\csc.exe.config
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\csc.rsp
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\csi.exe
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\csi.rsp
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.AppContext.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.Collections.Immutable.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.IO.FileSystem.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\vbc.exe
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\vbc.exe.config
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\vbc.rsp
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\VBCSCompiler.exe
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\VBCSCompiler.exe.config
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\OnlineSinavPortali.dll.config
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\OnlineSinavPortali.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\OnlineSinavPortali.pdb
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\Microsoft.Web.Infrastructure.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Helpers.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Mvc.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Razor.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.Deployment.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.Razor.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Razor.xml
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.xml
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.Deployment.xml
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.Razor.xml
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Helpers.xml
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Mvc.xml
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Razor.resources.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Webpages.resources.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Webpages.Deployment.resources.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Webpages.Razor.resources.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Helpers.resources.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Mvc.resources.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\obj\Debug\OnlineSinavPortali.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\obj\Debug\OnlineSinavPortali.pdb
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\EntityFramework.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\EntityFramework.SqlServer.dll
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\EntityFramework.xml
+c:\users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\bin\EntityFramework.SqlServer.xml
+C:\Users\acer\documents\visual studio 2017\Projects\OnlineSinavPortali\OnlineSinavPortali\obj\Debug\OnlineSinavPortali.csprojResolveAssemblyReference.cache
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\csc.exe
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\csc.exe.config
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\csc.rsp
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\csi.exe
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\csi.rsp
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.AppContext.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\vbc.exe
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\vbc.exe.config
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\vbc.rsp
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\VBCSCompiler.exe
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\OnlineSinavPortali.dll.config
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\OnlineSinavPortali.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\OnlineSinavPortali.pdb
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\EntityFramework.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\EntityFramework.SqlServer.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Helpers.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Mvc.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Razor.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.Deployment.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.Razor.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\EntityFramework.xml
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\EntityFramework.SqlServer.xml
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Razor.xml
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.xml
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.Deployment.xml
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Webpages.Razor.xml
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Helpers.xml
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\System.Web.Mvc.xml
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Razor.resources.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Webpages.resources.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Webpages.Deployment.resources.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Webpages.Razor.resources.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Helpers.resources.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\bin\tr\System.Web.Mvc.resources.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\obj\Debug\OnlineSinavPortali.csprojResolveAssemblyReference.cache
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\obj\Debug\OnlineSinavPortali.dll
+C:\Users\acer\Desktop\phpOrnek\OnlineSinavPortali\OnlineSinavPortali\obj\Debug\OnlineSinavPortali.pdb
