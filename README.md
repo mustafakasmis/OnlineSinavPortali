@@ -17,23 +17,23 @@
 
   - Kullanıcı
    
-    •	Kayıt olur.
-    •	Sınavlara girer.
-    •	Sınav istatistiklerini görür.
-    •	Sınavlara yorum yaparlar ve puan verirler.
+    a)	Kayıt olur.
+    b)	Sınavlara girer.
+    c)	Sınav istatistiklerini görür.
+    d)	Sınavlara yorum yaparlar ve puan verirler.
     
   - Akademisyen
   
-    •	Kayıt olur.
-    •	İlgili sınavı oluşturup sınavı yayınlar.
-    •	İlgili sınav ile istatistikleri görür.
-    •	Sınav ile ilgili yorumları görür.
+    a)	Kayıt olur.
+    b)	İlgili sınavı oluşturup sınavı yayınlar.
+    c)	İlgili sınav ile istatistikleri görür.
+    d)	Sınav ile ilgili yorumları görür.
     
   - Değerlendirici
   
-    •	Kayıt olur.
-    •	Sınavları değerlendirir ve sonuçları yayınlar.
-    •	İlgili sınav ile istatistikleri paylaşır
+    a)	Kayıt olur.
+    b)	Sınavları değerlendirir ve sonuçları yayınlar.
+    c)	İlgili sınav ile istatistikleri paylaşır
 
 
 
