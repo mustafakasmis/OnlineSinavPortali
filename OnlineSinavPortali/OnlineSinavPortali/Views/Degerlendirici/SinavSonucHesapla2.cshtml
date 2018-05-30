@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "SinavSonucHesapla2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@Html.ActionLink("DEĞERLENDİRİCİ ANASAYFA", "DegerlendiriciAnasayfa", null, new { @class = "text-info", @style = "font-size:20px;" })
+
+
+<h2>SINAV SONUÇ HESAPLAMA SAYFASI</h2>
+
+<br /><br />
+
+@using (Html.BeginForm("SinavSonucHesapla", "Degerlendirici", FormMethod.Post))
+{
+
+    @Html.Label("", "KULLANICI SEÇİNİZ", new { @class = "text-info" })<br /><br />
+
+    @Html.DropDownList("kullanici", new SelectList(ViewBag.Kisiler, "Text", "Value"), new { @class = "form-control", @id = "KullaniciForm" })<br /><br />
+
+    <input type="submit" name="onay" value="GİRİLEN SINAVLARI GETİR" class="btn btn-primary" />
+
+}
+
+<div><br /></div>
+
+@if (ViewBag.sinavlar != null)
+{
+
+    using (Html.BeginForm("SinavSonucHesapla2", "Degerlendirici", FormMethod.Post))
+    {
+
+        @Html.Label("", "SINAVI SEÇİNİZ", new { @class = "text-info" })<br /><br />
+
+        @Html.DropDownList("sinav", new SelectList(ViewBag.Sinavlar, "Text", "Value"), new { @class = "form-control" })<br /><br />
+
+        <input type="submit" name="onay" class="btn btn-primary" value="SINAV SONUCUNU HESAPLA" />
+
+    }
+
+}
+
+@if (TempData["sonucDurum"] != null)
+{
+    <h4>@TempData["sonucDurum"]</h4>
+}
