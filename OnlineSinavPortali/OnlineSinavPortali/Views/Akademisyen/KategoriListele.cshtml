@@ -1,0 +1,33 @@
+﻿@using OnlineSinavPortali.Models
+
+@model List<kategoriler>
+
+@{
+    ViewBag.Title = "KategoriListele";
+}
+
+<h2>KATEGORİ EKLEME SAYFASI</h2>
+
+@using (Html.BeginForm("KategoriListele", "Akademisyen", FormMethod.Post))
+{
+
+    @Html.DropDownList("Kategoriler", new SelectList(ViewBag.tumListe, "Text", "Value"), "ANA KATEGORİ SEÇİNİZ"
+    , new { @class = "form-control" })<br /><br />
+
+    <input type="submit" name="onay" value="LİSTELE" class="btn btn-success"/>
+    @Html.ActionLink("İPTAL", "Iptal", "Akademisyen", null, new { @class = "btn btn-success" })
+
+}
+
+
+@if (Model != null)
+{
+   <br />
+    <ul class="list-group">
+      @foreach(var item in Model)
+     {
+          <li class="list-group-item" style="color:green;">@item.kategoriAdi</li>
+     }
+    </ul>
+         
+}

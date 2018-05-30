@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "KategoriEkle";
+}
+
+<h2>KATEGORİ EKLEME SAYFASI</h2>
+
+@using (Html.BeginForm("KategoriEkle", "Akademisyen", FormMethod.Post))
+{
+
+    @Html.Label("", "KATEGORİ ADINI GİRİNİZ", new { @class = "text-info" }) <br />
+    @Html.TextBox("kategoriAdi", null, new { @class = "form-control" })<br />
+
+    @Html.Label("", "UST KATEGORİ VARSA ÜST KATEGORİ ADINI SEÇİNİZ", new { @class = "text-info" })<br />
+
+    @Html.DropDownList("TumKategoriler", new SelectList(ViewBag.tumListe, "Text", "Value"), "KATEGORİ SEÇİNİZ"
+    , new { @class = "form-control" })<br /><br />
+
+
+    <input type="submit" name="onay" value="EKLE" class="btn btn-success"/>
+    @Html.ActionLink("İPTAL", "Iptal", "Akademisyen", null, new { @class = "btn btn-success" })
+
+}
+
+
+@if (ViewBag.txt != null)
+{
+    <h3>@ViewBag.txt</h3>
+}

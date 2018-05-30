@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "AkademisyenAnasayfa";
+}
+
+<style>
+    a{
+        font-size: 40px;
+    }
+</style>
+
+
+<script>
+    $(function () {
+
+        $("#ktgIslem").hide();
+        $("#snvIslem").hide();
+
+        $("#ktg").click(function () {
+            $("#ktgIslem").toggle();
+            $("#snvIslem").hide();
+        });
+
+        $("#snv").click(function () {
+            $("#snvIslem").toggle();
+            $("#ktgIslem").hide();
+        });
+
+    });
+</script>
+
+
+<h2>AKADEMİSYEN ANASAYFA</h2>
+
+
+<div class="text-right">
+    @Html.ActionLink("LOGOUT", "AkademisyenCikis", "Akademisyen", null, new { @class = "btn btn-danger" })
+</div>
+
+<div><br /></div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-5 well text-center">
+            <button id="ktg" type="button" class="btn btn-primary">KATEGORİ İŞLEMLERİ </button>
+        </div>
+
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+
+
+        <div class="col-md-5 well text-center">
+            <button id="snv" type="button" class="btn btn-primary">SINAV İŞLEMLERİ</button>
+        </div>
+
+        <div><br /><br /><br /></div>
+
+        <div id="ktgIslem" class="col-md-12 text-center">
+
+            <div><br /></div><div><br /></div>
+            <div><br /></div><div><br /></div>
+         
+
+            <div class="col-md-12">
+
+                <div class="col-md-4">
+                    @Html.ActionLink("KATEGORİ EKLE", "KategoriEkle", "Akademisyen", null, new { @class = "btn btn-primary" })<br /><br />
+                </div>
+
+                <div class="col-md-4">
+                    @Html.ActionLink("KATEGORİ LİSTELE", "KategoriListele", "Akademisyen", null, new { @class = "btn btn-primary" })<br /><br />
+                </div>
+
+                <div class="col-md-4">
+                    @Html.ActionLink("KATEGORİ GUNCELLE", "KategoriGuncelle", "Akademisyen", null, new { @class = "btn btn-primary" })<br /><br />
+                </div>
+
+                <div>
+                    @Html.ActionLink("KATEGORİ SİL", "KategoriSil", "Akademisyen", null, new { @class = "btn btn-primary" })<br /><br />
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="snvIslem" class="col-md-12 text-center">
+
+            <div><br /></div><div><br /></div>
+            <div><br /></div><div><br /></div>
+            <div><br /></div><div><br /></div>
+
+            <div class="col-md-12">
+
+                <div class="col-md-4">
+                    @Html.ActionLink("SINAV YORUMLARINI GÖR", "SinavYorumlari", "Akademisyen", null, new { @class = "btn btn-primary" })<br /><br />
+                </div>
+
+                <div class="col-md-4">
+                   @Html.ActionLink("SINAV İSTATİSTİKLERİNİ GÖR", "SinavIstatistikleri", "Akademisyen", null, new { @class = "btn btn-primary" })<br /><br />
+                </div>
+
+
+                <div class="col-md-4">
+                    @Html.ActionLink("SORU İŞLEMLERİ", "SoruCevapIslemleriAnasayfa", "Akademisyen2", null, new { @class = "btn btn-primary" })<br />
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

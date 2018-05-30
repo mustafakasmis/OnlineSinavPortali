@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "KategoriSil";
+}
+
+<h2>KATEGORİ SİLME SAYFASI</h2>
+
+@using (Html.BeginForm("KategoriSil", "Akademisyen", FormMethod.Post))
+{
+
+    @Html.DropDownList("TumKategoriler", new SelectList(ViewBag.tumListe, "Text", "Value"), "KATEGORİ SEÇİNİZ"
+    , new { @class = "form-control" })<br /><br />
+
+    <input type="submit" name="onay" value="SİL" class="btn btn-success" />
+    @Html.ActionLink("İPTAL", "Iptal", "Akademisyen", null, new { @class = "btn btn-success" })
+
+}
+
+@if (ViewBag.txt != null)
+{
+    <h1>@ViewBag.txt</h1>
+}

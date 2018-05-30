@@ -1,0 +1,71 @@
+﻿@using OnlineSinavPortali.Models
+
+@model Tuple<List<girisler>,List<sinavIstatistik>>
+
+@{
+    ViewBag.Title = "SinavIstatistikleri";
+}
+
+<style>
+    table {
+        border: 1px solid red;
+        margin: 1px 1px 1px 1px;
+    }
+
+    td {
+        color: #07ea43;
+        font-size: 20px;
+    }
+
+    th {
+        color: yellowgreen;
+        font-size:20px;
+    }
+</style>
+
+
+@Html.ActionLink("AKADEMİSYEN ANASAYFA", "AkademisyenAnasayfa", null, new { @class = "text-info", @style = "font-size:20px;" })
+
+<br />
+
+<h2>SINAV İSTATİSTİKLERİ SAYFASI</h2>
+
+<br /><br />
+
+    @using (Html.BeginForm("SinavIstatistikleri", "Akademisyen", FormMethod.Post))
+    {
+   
+  @Html.DropDownList("Sinavlar", new SelectList(ViewBag.tumSinavlar, "Text", "Value"), "Sınav Seçiniz", new { @class = "form-control" })<br />
+    <br />
+
+        <input  type="submit" name="onay" value="İSTATİSTİKLERİ GÖR" class="btn btn-success"/>
+        @Html.ActionLink("İPTAL", "Iptal", "Akademisyen", null, new { @class = "btn btn-success" })
+    }
+
+<div><br /><br /></div>
+
+@if (Model != null)
+{
+
+    <table border="1">
+
+        <tr>
+            <th>KULLANICI ADI</th>
+            <th>DOĞRU SAYISI</th>
+            <th>YANLIŞ SAYISI</th>
+            <th>PUANI</th>
+        </tr>
+
+        @for(int i = 0; i < Model.Item1.Count; i++)
+        {
+            <tr>
+                <td>@Model.Item1[i].kullanici_adi</td>
+                <td>@Model.Item2[i].dogruSay</td>
+                <td>@Model.Item2[i].yanlisSay</td>
+                <td>@Model.Item2[i].puan</td>
+            </tr>
+        }
+
+    </table>
+
+}
