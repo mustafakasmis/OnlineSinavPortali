@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <style>
+        a{
+            font-size:15px;
+        }
+        h4 {
+            font-size: 15px;
+            color: #07ea43;
+        }
+        h3{
+            margin:5px 0 0 0;
+        }
+
+        body{
+            background-image:url('../../images/sftwrImage.jpg');
+        }
+    </style>
+
+</head>
+
+<body>
+   
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-10">
+               
+                <ul class="nav nav-pills">
+
+                    <li>@Html.ActionLink("ANASAYFA", "KullaniciAnasayfa", "Kullanici", null, new { @role = "presentation" })</li>
+                    <li>@Html.ActionLink("PROFİL DÜZENLE", "KullaniciProfilDuzenle", "Kullanici",null, new { @role = "presentation" })</li>
+                    <li>@Html.ActionLink("SINAVLARA GİR", "KullaniciSinavGir", "Kullanici",null ,new { @role = "presentation" })</li>
+
+              
+                    <li>@Html.ActionLink("SINAV KURALLARI", "KullaniciSinavKural", "Kullanici", null, new { @role = "presentation" })</li>
+                    <li>@Html.ActionLink("SINAV İSTATİSTİKLERİ", "KullaniciSinavIstatistik", "Kullanici", null, new { @role = "presentation" })</li>
+                    <li>@Html.ActionLink("LOGOUT", "KullaniciCikis", "Kullanici",null, new { @role = "presentation" })</li>
+
+                </ul>
+
+                    <div><br /></div>
+                    <div class="col-md-10">@RenderBody()</div>
+
+            </div>
+
+            <div class="col-md-2">
+
+                <h3 class="text-primary">TAGS</h3>
+                
+                <hr />
+
+                <ul class="list-group">
+                    <li class="list-group-item"><h4 class="label label-success">WEB</h4></li>
+                    <li class="list-group-item"><h4 class="label label-success">SINAV</h4></li>
+                    <li class="list-group-item"><h4 class="label label-success">PORTAL</h4></li>
+                    <li class="list-group-item"><h4 class="label label-success">BİLGİ</h4>
+                    <li class="list-group-item"><h4 class="label label-success">REKABET</h4></li>
+                </ul>
+
+                <br />
+                <br />
+
+                <h4>ÜYELİK TARİHİNİZ <br /> @TempData["tarih"]</h4>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div >
+
+        <hr />
+
+        <footer>
+            <p class="text-center">&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
