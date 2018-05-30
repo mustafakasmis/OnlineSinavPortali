@@ -1,9 +1,13 @@
 # OnlineSinavPortali
 
-* linguist-language=C#
+# Kullanıcıların sisteme kayıt olup sınavlara bu platform üzerinden girdiği, sınavların bu platform üzerinden oluşturulup	 değerlendirildiği ve sonuçlarının bu platform üzerinden yayınlandığı bir web portalı geliştirilmiştir.
 
-* platforms/* linguist-vendored=true
+# Proje C# - .NET teknolojileri ile kodlanmıştır.
 
-* plugins/* linguist-vendored=true
+# Frontend kodlamada web teknolojileri (Html, Css, Javascript, Jquery) kullanılmıştır.
 
-* public/* linguist-vendored=true
+# Backend kısmında C#, ASP.NET MVC kullanılmıştır.
+
+# Server hizmeti olarak IIS hizmeti kullanılmıştır.
+ 
+# Veritabanı dili olarak T-SQL kullanılmıştır. Veritabanın ihtiyacı olan server ihtiyacı Microsoft Sql Server ile giderilmiştir.
