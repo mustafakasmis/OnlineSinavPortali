@@ -1,7 +1,7 @@
 # OnlineSinavPortali
 
 
-* <b>PROJE GENEL YAPISI</>
+* <b>PROJE GENEL YAPISI</b>
 
 
   - Kullanıcıların sisteme kayıt olup sınavlara bu platform üzerinden girdiği, sınavların bu platform üzerinden oluşturulup	 değerlendirildiği ve sonuçlarının bu platform üzerinden yayınlandığı bir web portalı geliştirilmiştir.
