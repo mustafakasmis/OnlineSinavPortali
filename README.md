@@ -18,27 +18,27 @@
 
 <br>
 
-- Portalda 3 adet görev tanımlı kişi vardır.
+  - Portalda 3 adet görev tanımlı kişi vardır.
 
-  - Kullanıcı
+    - Kullanıcı
    
-    a)	Kayıt olur.
-    b)	Sınavlara girer.
-    c)	Sınav istatistiklerini görür.
-    d)	Sınavlara yorum yaparlar ve puan verirler.
+      a)	Kayıt olur.
+      b)	Sınavlara girer.
+      c)	Sınav istatistiklerini görür.
+      d)	Sınavlara yorum yaparlar ve puan verirler.
     
-  - Akademisyen
+    - Akademisyen
   
-    a)	Kayıt olur.
-    b)	İlgili sınavı oluşturup sınavı yayınlar.
-    c)	İlgili sınav ile istatistikleri görür.
-    d)	Sınav ile ilgili yorumları görür.
+      a)	Kayıt olur.
+      b)	İlgili sınavı oluşturup sınavı yayınlar.
+      c)	İlgili sınav ile istatistikleri görür.
+      d)	Sınav ile ilgili yorumları görür.
    
-  - Değerlendirici
+    - Değerlendirici
   
-    a)	Kayıt olur.
-    b)	Sınavları değerlendirir ve sonuçları yayınlar.
-    c)	İlgili sınav ile istatistikleri paylaşır
+      a)	Kayıt olur.
+      b)	Sınavları değerlendirir ve sonuçları yayınlar.
+      c)	İlgili sınav ile istatistikleri paylaşır
 
 <br>
 
