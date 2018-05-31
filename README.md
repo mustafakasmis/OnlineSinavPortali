@@ -33,7 +33,7 @@
     b)	İlgili sınavı oluşturup sınavı yayınlar.
     c)	İlgili sınav ile istatistikleri görür.
     d)	Sınav ile ilgili yorumları görür.
-    
+   
   - Değerlendirici
   
     a)	Kayıt olur.
