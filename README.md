@@ -79,3 +79,20 @@
  
   * İleriye tıklanır ve mevcut databasedeki tablolar, saklı yordamlar, görünümler seçilir. Son a tıklanarak işlem sona erer. 
  
+<br>
+
+* EKLER 
+
+  - İLETİŞİM KISMINI TEST ETME İŞLEMİ
+  
+      -Controllers klasörü altındaki HomeController.cs dosyasını açınız.
+      
+      -[HttpPost,ValidateInput(false)]
+       public ActionResult Iletisim(string ad,string soyad,string e_mail,string mesaj) 
+       Actionuna gidiniz.
+       
+      -İlgili Action içindeki aşağıdaki kod parçacıklarını kendinize göre düzenleyiniz.
+      
+        - var toAddress = new MailAddress("abc@gmail.com"); // Maili alacak kişinin mail adresi
+        - Credentials = new NetworkCredential(fromAddress.Address, "12345678") // ikinci parametre Maili alacak kişinin kullandığı mail adresinin şifresidir. 
+        
