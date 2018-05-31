@@ -18,7 +18,7 @@
 
 <br>
 
-  - Portalda 3 adet görev tanımlı kişi vardır.
+  * Portalda 3 adet görev tanımlı kişi vardır.
 
     - Kullanıcı
    
