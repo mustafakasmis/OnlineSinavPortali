@@ -18,7 +18,7 @@
 
 <br>
 
-  * Portalda 3 adet görev tanımlı kişi vardır.
+  -- Portalda 3 adet görev tanımlı kişi vardır.
 
     - Kullanıcı
    
@@ -42,14 +42,14 @@
 
 <br>
 
-- Portal Olay Akışı aşağıdaki gibidir:
+ -- Portal Olay Akışı aşağıdaki gibidir:
 
 
-  * Akademisyenler sınavları oluşturur ve yayınlarlar. 
-  * Kullanıcılar ilgili  kategorilerde sınavlara girerler ve sınavları puanlayıp yorumlarlar. 
-  * Değerlendiriciler sınav sonuçlarını ve istatistiklerini hesaplarlar.
-  * Akademisyenler ilgili sınavlara yapılan yorumları ve ilgili sınav istatistiklerini görürler.
-  * Kullanıcılar ilgili sınavlara yapılan yorumları ve ilgili sınav istatistiklerini görürler.
+    * Akademisyenler sınavları oluşturur ve yayınlarlar. 
+    * Kullanıcılar ilgili  kategorilerde sınavlara girerler ve sınavları puanlayıp yorumlarlar. 
+    * Değerlendiriciler sınav sonuçlarını ve istatistiklerini hesaplarlar.
+    * Akademisyenler ilgili sınavlara yapılan yorumları ve ilgili sınav istatistiklerini görürler.
+    * Kullanıcılar ilgili sınavlara yapılan yorumları ve ilgili sınav istatistiklerini görürler.
   
 <br>
 
