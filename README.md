@@ -50,8 +50,8 @@
   * Değerlendiriciler sınav sonuçlarını ve istatistiklerini hesaplarlar.
   * Akademisyenler ilgili sınavlara yapılan yorumları ve ilgili sınav istatistiklerini görürler.
   * Kullanıcılar ilgili sınavlara yapılan yorumları ve ilgili sınav istatistiklerini görürler.
-
-
+  
+<br>
 
 * <b>PROJE ÇALIŞTIRILABİLİR HALE GETİRME ADIMLARI</b>
 
