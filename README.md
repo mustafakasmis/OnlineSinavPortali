@@ -68,7 +68,7 @@
  
   * Proje kök dizin hiyerarşisindeki dosyalardan "portal.edmx" dosyası silinir.
  
-  * Web.config dosyası altında "<connectionStrings> </connectionStrings>" arasındaki "<add name="SinavPortalEntities" şeklinde devam eden satır silinir.
+  * Web.config dosyası altında "<connectionStrings></connectionStrings>" arasındaki "<add name="SinavPortalEntities" şeklinde devam eden satır silinir.
      
   * Projeye sağ tıklanır. Ekle->Yeni Öğe->Veri->ADO.NET Entity Data Model yolu izlenir, Ad kısmından Data Modele bir isim verilir, Ekle 
  butonuna tıklanarak devam edilir.
