@@ -244,7 +244,7 @@ namespace OnlineSinavPortali.Controllers
         {
 
             var fromAddress = new MailAddress(e_mail);
-            var toAddress = new MailAddress("mustafakasmis@gmail.com");
+            var toAddress = new MailAddress("abc@gmail.com");
             const string subject = "Site Adı | Sitenizden Gelen İletişim Formu";
 
             using (var smtp = new SmtpClient
@@ -254,7 +254,7 @@ namespace OnlineSinavPortali.Controllers
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromAddress.Address, "**********")
+                Credentials = new NetworkCredential(fromAddress.Address, "12345678")
             })
             {
                 using (var message = new MailMessage(fromAddress, toAddress) { Subject = subject, Body = mesaj })
