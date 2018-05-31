@@ -56,26 +56,26 @@
 - PROJE ÇALIŞTIRILABİLİR HALE GETİRME ADIMLARI
 
 
- * Sisteminizde Visual Studio 2017, Microsoft Sql Server, Microsoft Sql Server Management Studio gibi yazılımların kurulu olması      gerekmektedir.
+  * Sisteminizde Visual Studio 2017, Microsoft Sql Server, Microsoft Sql Server Management Studio gibi yazılımların kurulu olması      gerekmektedir.
  
- * Proje ve proje ait ilgili database script dosyası "Clone or download" butonuna tıklanarak zip formatı halinde indirilir.
+  * Proje ve proje ait ilgili database script dosyası "Clone or download" butonuna tıklanarak zip formatı halinde indirilir.
  
- * Zip dosyası içindeki dosyalar WinRAR ile boş bir klasöre çıkartılır.
+  * Zip dosyası içindeki dosyalar WinRAR ile boş bir klasöre çıkartılır.
  
- * Database script dosyası çalıştırılır ve açılan Sql Server Managemment Studio arayüzündeki "Execute" kısmına tıklanarak database oluşturulur.
+  * Database script dosyası çalıştırılır ve açılan Sql Server Managemment Studio arayüzündeki "Execute" kısmına tıklanarak database oluşturulur.
  
- * Proje dosyalarının bulunduğu klasördeki OnlineSinavPortali.sln dosyası çalıştırılır ve proje Visual Studio da açılacaktır.
+  * Proje dosyalarının bulunduğu klasördeki OnlineSinavPortali.sln dosyası çalıştırılır ve proje Visual Studio da açılacaktır.
  
- * Proje kök dizin hiyerarşisindeki dosyalardan "portal.edmx" dosyası silinir.
+  * Proje kök dizin hiyerarşisindeki dosyalardan "portal.edmx" dosyası silinir.
  
- * Web.config dosyası altında "<connectionStrings> </connectionStrings>" arasındaki "<add name="SinavPortalEntities" şeklinde devam eden satır silinir.
+  * Web.config dosyası altında "<connectionStrings> </connectionStrings>" arasındaki "<add name="SinavPortalEntities" şeklinde devam eden satır silinir.
      
- * Projeye sağ tıklanır. Ekle->Yeni Öğe->Veri->ADO.NET Entity Data Model yolu izlenir, Ad kısmından Data Modele bir isim verilir, Ekle 
+  * Projeye sağ tıklanır. Ekle->Yeni Öğe->Veri->ADO.NET Entity Data Model yolu izlenir, Ad kısmından Data Modele bir isim verilir, Ekle 
  butonuna tıklanarak devam edilir.
  
- * Çıkan ekrandan EF Designer from database seçilir ve İleri ye tıklanarak devam edilir.
+  * Çıkan ekrandan EF Designer from database seçilir ve İleri ye tıklanarak devam edilir.
  
- * Çıkan ekrandan New Connection tıklanır. Sql Server sunucu adı girilir ve oluşturulan veritabanı seçilir. Tamam a tıklanarak devam edilir.
+  * Çıkan ekrandan New Connection tıklanır. Sql Server sunucu adı girilir ve oluşturulan veritabanı seçilir. Tamam a tıklanarak devam edilir.
  
- * İleriye tıklanır ve mevcut databasedeki tablolar, saklı yordamlar, görünümler seçilir. Son a tıklanarak işlem sona erer. 
+  * İleriye tıklanır ve mevcut databasedeki tablolar, saklı yordamlar, görünümler seçilir. Son a tıklanarak işlem sona erer. 
  
