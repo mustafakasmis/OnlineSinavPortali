@@ -53,7 +53,7 @@
 
 
 
--<b>PROJE ÇALIŞTIRILABİLİR HALE GETİRME ADIMLARI</b>
+* <b>PROJE ÇALIŞTIRILABİLİR HALE GETİRME ADIMLARI</b>
 
 
   * Sisteminizde Visual Studio 2017, Microsoft Sql Server, Microsoft Sql Server Management Studio gibi yazılımların kurulu olması      gerekmektedir.
