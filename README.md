@@ -1,6 +1,6 @@
 # OnlineSinavPortali
 
-# PROJE GENEL YAPISI
+#- PROJE GENEL YAPISI
 
 - Kullanıcıların sisteme kayıt olup sınavlara bu platform üzerinden girdiği, sınavların bu platform üzerinden oluşturulup	 değerlendirildiği ve sonuçlarının bu platform üzerinden yayınlandığı bir web portalı geliştirilmiştir.
 
@@ -50,7 +50,7 @@
   * Kullanıcılar ilgili sınavlara yapılan yorumları ve ilgili sınav istatistiklerini görürler.
 
 
-# PROJE ÇALIŞTIRILABİLİR HALE GETİRME ADIMLARI
+#- PROJE ÇALIŞTIRILABİLİR HALE GETİRME ADIMLARI
 
  - Sisteminizde Visual Studio 2017, Microsoft Sql Server, Microsoft Sql Server Management Studio gibi yazılımların kurulu olması      gerekmektedir.
  
