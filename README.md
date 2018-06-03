@@ -85,7 +85,7 @@
 
   - İLETİŞİM KISMINI TEST ETME İŞLEMİ
   
-      -Projedenin kök dizin hiyerarşisindeki Controllers klasörü altında bulunan HomeController.cs dosyasını açınız.
+      -Projenin kök dizin hiyerarşisindeki Controllers klasörü altında bulunan HomeController.cs dosyasını açınız.
       
       -[HttpPost,ValidateInput(false)]
        public ActionResult Iletisim(string ad,string soyad,string e_mail,string mesaj) 
