@@ -1,5 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 * linguist-vendored
-*.cshtml linguist-vendored=false
+*.cs linguist-vendored=false
 
